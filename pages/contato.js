@@ -1,12 +1,11 @@
 import React from "react";
-import Articles from "../components/articles";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 import { fetchAPI } from "../lib/api";
 
-const Contato = () => {
+const Contato = ({ homepage }) => {
   return (
-    <Layout categories={categories} navtitle={navtitle}>
+    <Layout>
       <Seo seo={homepage.seo} />
       
     </Layout>
@@ -15,17 +14,14 @@ const Contato = () => {
 
 export async function getStaticProps() {
   // Run API calls in parallel
-  const [articles, categories, homepage, navtitle] = await Promise.all([
-    fetchAPI("/articles?status=published"),
-    fetchAPI("/categories"),
-    fetchAPI("/homepage"),
-    fetchAPI("/nav-subtitle")
+  const [] = await Promise.all([
+    fetchAPI("/homepage")
   ]);
 
   return {
-    props: { articles, categories, homepage },
+    props: { homepage },
     revalidate: 1,
   };
 }
 
-export default Home;
+export default Contato;

@@ -7,8 +7,8 @@ const Nav = ({ header }) => {
   const logoUrl = getStrapiMedia(header.logo);
   return (
     <div>
-      <nav className="uk-navbar-container" data-uk-navbar>
-        <div className="uk-navbar-left">
+      <nav className="navbar-container">
+        <div className="navbar-left">
         <Image
           image={header.logo}
           style={{
