@@ -88,9 +88,9 @@
 // export default Article;
 
 import React from "react";
-import Layout from "../components/layout";
-import Seo from "../components/seo";
-import { fetchAPI } from "../lib/api";
+import Layout from "../../components/layout";
+import Seo from "../../components/seo";
+import { fetchAPI } from "../../lib/api";
 
 const Article = ({ homepage }) => {
   return (
