@@ -14,7 +14,7 @@ const Contato = ({ homepage }) => {
 
 export async function getStaticProps() {
   // Run API calls in parallel
-  const [] = await Promise.all([
+  const [homepage] = await Promise.all([
     fetchAPI("/homepage")
   ]);
 
