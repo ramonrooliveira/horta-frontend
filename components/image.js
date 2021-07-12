@@ -6,7 +6,7 @@ const Image = ({ image, style }) => {
   return (
     <img
       src={imageUrl}
-      alt={image.alternativeText || image.name}
+      alt={image?.alternativeText || image?.name || ''}
       style={style}
     />
   );
