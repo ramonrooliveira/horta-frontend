@@ -8,7 +8,7 @@ const Nav = ({ header }) => {
       <nav className="navbar-container">
         <div className="navbar-left">
           <Image
-            image={header.logo}
+            image={header?.logo}
             style={{
               position: "static",
               borderRadius: "50%",
@@ -20,7 +20,7 @@ const Nav = ({ header }) => {
         </div>
         <div className="navbar-right">
           <ul className="navbar-nav">
-            {header.link.map((link) => {
+            {header?.link?.map((link) => {
               return (
                 <li key={link.label}>
                   <Link href={link.url}>
