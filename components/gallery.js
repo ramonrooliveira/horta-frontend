@@ -7,7 +7,7 @@ const Gallery = ({ projects }) => {
     <div>
       <div className="gallery-grid">
         <div>
-          {projects.map((project, i) => {
+          {projects?.map((project, i) => {
             return (
               <div>
                 <Image
