@@ -1,34 +1,29 @@
 import React from "react";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
+import Gallery from "../components/gallery";
 import { fetchAPI } from "../lib/api";
 
-const Home = ({ homepage, header }) => {
+const Home = ({ homepage, header, footer, projects }) => {
   return (
-    <Layout header={header}>
+    <Layout header={header} footer={footer}>
       <Seo seo={homepage.seo} />
-      <div className="uk-section">
-        <div className="uk-container uk-container-large">
-          <h1>{homepage.hero.title}</h1>
-          <h1>{homepage.hero.subtitle}</h1>
-          {/* <Articles articles={articles} /> */}
-        </div>
-      </div>
+      <Gallery projects={projects}/>
     </Layout>
   );
 };
 
 export async function getStaticProps() {
   // Run API calls in parallel
-  const [homepage, header] = await Promise.all([
-    // fetchAPI("/articles?status=published"),
-    // fetchAPI("/categories"),
+  const [homepage, header, footer, projects] = await Promise.all([
     fetchAPI("/homepage"),
-    fetchAPI("/header")
+    fetchAPI("/header"),
+    fetchAPI("/footer"),
+    fetchAPI("/projects")
   ]);
 
   return {
-    props: { homepage, header },
+    props: { homepage, header, footer, projects },
     revalidate: 1,
   };
 }

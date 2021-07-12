@@ -3,23 +3,24 @@ import Layout from "../components/layout";
 import Seo from "../components/seo";
 import { fetchAPI } from "../lib/api";
 
-const Contato = ({ homepage }) => {
+const Contato = ({ homepage, header, footer }) => {
   return (
-    <Layout>
+    <Layout header={header, footer}>
       <Seo seo={homepage.seo} />
-      
     </Layout>
   );
 };
 
 export async function getStaticProps() {
   // Run API calls in parallel
-  const [homepage] = await Promise.all([
-    fetchAPI("/homepage")
+  const [homepage, header, footer] = await Promise.all([
+    fetchAPI("/homepage"),
+    fetchAPI("/header"),
+    fetchAPI("/footer")
   ]);
 
   return {
-    props: { homepage },
+    props: { homepage, header, footer },
     revalidate: 1,
   };
 }

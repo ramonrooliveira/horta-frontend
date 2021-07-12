@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "./image";
 
-const Card = ({ article }) => {
+const Card = ({ project }) => {
   return (
     <Link as={`/article/${article.slug}`} href="/article/[id]">
       <a className="uk-link-reset">
