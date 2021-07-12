@@ -6,7 +6,7 @@ import { fetchAPI } from "../lib/api";
 const Sobre = ({ homepage, header, footer }) => {
   return (
     <Layout header={header} footer={footer}>
-      <Seo seo={homepage.seo} />
+      {/* <Seo seo={homepage.seo} /> */}
     </Layout>
   );
 };

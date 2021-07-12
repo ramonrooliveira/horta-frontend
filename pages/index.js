@@ -7,7 +7,7 @@ import { fetchAPI } from "../lib/api";
 const Home = ({ homepage, header, footer, projects }) => {
   return (
     <Layout header={header} footer={footer}>
-      <Seo seo={homepage.seo} />
+      {/* <Seo seo={homepage.seo} /> */}
       <Gallery projects={projects}/>
     </Layout>
   );

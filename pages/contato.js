@@ -5,8 +5,8 @@ import { fetchAPI } from "../lib/api";
 
 const Contato = ({ homepage, header, footer }) => {
   return (
-    <Layout header={header, footer}>
-      <Seo seo={homepage.seo} />
+    <Layout header={header} footer={footer}>
+      {/* <Seo seo={homepage.seo} /> */}
     </Layout>
   );
 };
