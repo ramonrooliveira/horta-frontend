@@ -21,7 +21,7 @@ export async function getStaticProps() {
 
   return {
     props: { homepage, header, footer },
-    revalidate: 1,
+    // revalidate: 1,
   };
 }
 
