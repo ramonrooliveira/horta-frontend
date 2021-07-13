@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "./image";
+import Link from "next/link";
 
 const Gallery = ({ projects }) => {
 
@@ -9,15 +10,19 @@ const Gallery = ({ projects }) => {
         <div>
           {projects?.map((project, i) => {
             return (
-              <div>
-                <Image
-                  image={project.cover}
-                  style={{
-                    position: "static",
-                    height: 150,
-                  }}
-                />
-                <span>{project.title}</span>
+              <div key={project.slug}>
+                <Link href={`/projeto/${project.slug}`}>
+                <a>
+                  <Image
+                    image={project.cover}
+                    style={{
+                      position: "static",
+                      height: 150,
+                    }}
+                    />
+                  <span>{project.title}</span>
+                </a>
+                </Link>
               </div>
             );
           })}

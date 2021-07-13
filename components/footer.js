@@ -7,7 +7,7 @@ const Footer = ({ footer }) => {
       <div className="footer-container">
         {footer?.link?.map(elem => {
           return (
-            <Link href={elem.url}>
+            <Link key={elem.label} href={elem.url}>
             <a>{elem.label}</a>
           </Link>
           )

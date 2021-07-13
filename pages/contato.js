@@ -6,7 +6,7 @@ import { fetchAPI } from "../lib/api";
 const Contato = ({ homepage, header, footer }) => {
   return (
     <Layout header={header} footer={footer}>
-      {/* <Seo seo={homepage.seo} /> */}
+      <Seo seo={homepage.seo} />
     </Layout>
   );
 };
@@ -21,7 +21,7 @@ export async function getStaticProps() {
 
   return {
     props: { homepage, header, footer },
-    // revalidate: 1,
+    revalidate: 1,
   };
 }
 

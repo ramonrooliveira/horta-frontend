@@ -3,6 +3,7 @@ import Head from "next/head";
 import { createContext } from "react";
 import { getStrapiMedia } from "../lib/media";
 import { fetchAPI } from "../lib/api";
+import '../assets/scss/global.scss';
 import '../assets/scss/nav.scss';
 import '../assets/scss/footer.scss';
 
@@ -19,6 +20,12 @@ const MyApp = ({ Component, pageProps }) => {
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Staatliches"
+        />
+        <link
+          rel="preload"
+          href="../../public/fonts/Museo-Sans/MuseoSans-100.otf"
+          as="font"
+          crossOrigin=""
         />
         {/* <link
           rel="stylesheet"

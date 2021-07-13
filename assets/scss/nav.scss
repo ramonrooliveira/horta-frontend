@@ -1,12 +1,28 @@
-body {
-  margin: 0;
-  padding: 0;
-}
+@import "./variables.scss";
 
 .navbar-container {
   display: flex;
-  background-color: aquamarine;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: $space-xl 0;
+
   .navbar-left {
-    color: blue;
+    display: flex;
+    color: $primary-color;
+
+  .navbar-phrases {
+    margin: 0 0 $space-sm $space-lg ;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+  }    
+  }
+
+  .navbar-right {
+    a.navbar-link {
+      text-decoration: none;
+      color: $primary-color;
+      margin-left: $space-md;
+    }
   }
 }

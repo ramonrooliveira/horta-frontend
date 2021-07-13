@@ -1,0 +1,18 @@
+@import "./variables.scss";
+
+@font-face {
+  font-family: "MuseoSans";
+  src: url("../../public/fonts/Museo-Sans/MuseoSans-100.otf");
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+}
+
+html * {
+  font-family: "MuseoSans";
+}
+
+body {
+  margin: 0;
+  padding: 0 15vw;
+}
