@@ -6,27 +6,29 @@ const Gallery = ({ projects }) => {
 
   return (
     <div>
-      <div className="gallery-grid">
-        <div>
-          {projects?.map((project, i) => {
-            return (
-              <div key={project.slug}>
-                <Link href={`/projeto/${project.slug}`}>
-                <a>
+      <div className="gallery__grid">
+        {projects?.map((project, i) => {
+          return (
+            <div className="gallery__card" key={project.slug}>
+              <Link href={`/projeto/${project.slug}`}>
+              <a className="gallery__card-link">
+                <div className="gallery__card-project-cover">
                   <Image
                     image={project.cover}
                     style={{
                       position: "static",
-                      height: 150,
+                      height: 200,
                     }}
-                    />
+                  />
+                </div>
+                <div className="gallery__card-project-name">
                   <span>{project.title}</span>
-                </a>
-                </Link>
-              </div>
-            );
-          })}
-        </div>
+                </div>
+              </a>
+              </Link>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

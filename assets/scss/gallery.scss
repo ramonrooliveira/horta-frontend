@@ -1,0 +1,26 @@
+@import './variables';
+
+.gallery__grid {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+
+  .gallery__card {
+    .gallery__card-link {
+      text-decoration: none;
+
+      .gallery__card-project-cover {
+        max-height: 200px;
+        object-fit: cover;
+      }
+
+      .gallery__card-project-name {
+        padding: $space-md 0 $space-lg;
+        span {
+          font-size: $font-sm;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}

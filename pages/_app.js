@@ -6,6 +6,8 @@ import { fetchAPI } from "../lib/api";
 import '../assets/scss/global.scss';
 import '../assets/scss/nav.scss';
 import '../assets/scss/footer.scss';
+import '../assets/scss/about.scss';
+import '../assets/scss/gallery.scss';
 
 // Store Strapi Global object in context
 export const GlobalContext = createContext({});

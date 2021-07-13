@@ -1,0 +1,9 @@
+@import './variables';
+
+.about__container {
+  display: flex;
+
+  .about__text-section {
+    padding: 0 $space-xxl;
+  }
+}
