@@ -16,8 +16,10 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-markdown": "^4.2.2",
+    "react-medium-image-zoom": "^4.3.4",
     "react-moment": "^0.9.6",
-    "sass": "^1.35.2"
+    "sass": "^1.35.2",
+    "simple-react-lightbox": "^3.6.6"
   },
   "license": "MIT",
   "devDependencies": {

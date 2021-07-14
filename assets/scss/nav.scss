@@ -7,16 +7,24 @@
   padding: $space-xl 0;
   margin-bottom: 72px;
 
+  .navbar__logo-container {
+    max-height: 100px;
+    .navbar__logo {
+      max-height: 100px;
+    }
+  }
+
   .navbar-left {
     display: flex;
+    align-items: flex-end;
     color: $primary-color;
 
-  .navbar-phrases {
-    margin: 0 0 $space-sm $space-lg ;
-    display: flex;
-    flex-direction: column;
-    align-self: flex-end;
-  }    
+    .navbar-phrases {
+      margin-left: $space-lg ;
+      display: flex;
+      flex-direction: column;
+      align-self: flex-end;
+    }    
   }
 
   .navbar-right {
@@ -26,4 +34,45 @@
       margin-left: $space-md;
     }
   }
+}
+
+@media screen and (min-width: $breakpoint-mobile-min) and (max-width: $breakpoint-mobile-max) {
+  .navbar-container {
+    flex-direction: row;
+    padding: $space-sm;
+    align-items: center;
+    margin-bottom: $space-sm;
+
+    .navbar__logo {
+      height: 75px;
+    }
+
+    .navbar-left {
+      // flex-direction: column;
+      .navbar-phrases {
+        margin: 0;
+      }
+    }
+
+    .navbar-right {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint-tablet-min) and (max-width: $breakpoint-tablet-max) {
+  .navbar-container {
+    margin-bottom: $space-md;
+  }
+}
+
+@media screen and (min-width: $breakpoint-small-min) and (max-width: $breakpoint-small-max) {
+  .navbar-container {
+    margin-bottom: $space-md;
+  }
+}
+
+@media screen and (min-width: $breakpoint-desktop-min) and (max-width: $breakpoint-desktop-max) {
+
 }

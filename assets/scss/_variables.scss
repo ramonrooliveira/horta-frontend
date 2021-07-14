@@ -8,9 +8,25 @@ $space-md: 12px;
 $space-lg: 16px;
 $space-xl: 24px;
 $space-xxl: 48px;
+$space-2xl: 96px;
 
 /* FONTS */
 $font-sm: 14px;
 $font-md: 16px;
 $font-lg: 20px;
 $font-xl: 24px;
+
+/* MEDIA QUERIES BREAKPOINTS*/
+$breakpoint-mobile-min: 320px;
+$breakpoint-mobile-max: 480px;
+
+$breakpoint-tablet-min: 481px;
+$breakpoint-tablet-max: 768px;
+
+$breakpoint-small-min: 769px;
+$breakpoint-small-max: 1024px;
+
+$breakpoint-desktop-min: 1025px;
+$breakpoint-desktop-max: 1200px;
+
+$breakpoint-large-min: 1201px;

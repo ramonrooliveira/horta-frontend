@@ -13,14 +13,11 @@ const Sobre = ({ homepage, header, footer, about }) => {
           <div className="left-image-section">
             <Image
               image={about?.image}
-              style={{
-                position: "static",
-                height: 380,
-              }}
+              className="about__image"
             />
           </div>
           <div className="about__text-section">
-            <p>{about?.title}</p>
+            <h1>{about?.title}</h1>
             <p>{about?.text}</p>
             <Link href={about?.button.url}>
               <button 

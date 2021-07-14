@@ -3,11 +3,13 @@ import Head from "next/head";
 import { createContext } from "react";
 import { getStrapiMedia } from "../lib/media";
 import { fetchAPI } from "../lib/api";
+import SimpleReactLightbox from 'simple-react-lightbox'
 import '../assets/scss/global.scss';
 import '../assets/scss/nav.scss';
 import '../assets/scss/footer.scss';
 import '../assets/scss/about.scss';
 import '../assets/scss/gallery.scss';
+import '../assets/scss/project.scss';
 
 // Store Strapi Global object in context
 export const GlobalContext = createContext({});
@@ -29,16 +31,11 @@ const MyApp = ({ Component, pageProps }) => {
           as="font"
           crossOrigin=""
         />
-        {/* <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/css/uikit.min.css"
-        /> */}
-        {/* <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit.min.js" />
-        <script src="https://cdn.jsdelivr.net/npm/uikit@3.2.3/dist/js/uikit-icons.min.js" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit.js" /> */}
       </Head>
       <GlobalContext.Provider value={global}>
-        <Component {...pageProps} />
+        <SimpleReactLightbox>
+          <Component {...pageProps} />
+        </SimpleReactLightbox>
       </GlobalContext.Provider>
     </>
   );

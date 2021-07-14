@@ -15,10 +15,7 @@ const Gallery = ({ projects }) => {
                 <div className="gallery__card-project-cover">
                   <Image
                     image={project.cover}
-                    style={{
-                      position: "static",
-                      height: 200,
-                    }}
+                    className="gallery__image"
                   />
                 </div>
                 <div className="gallery__card-project-name">

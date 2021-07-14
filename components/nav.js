@@ -7,15 +7,12 @@ const Nav = ({ header }) => {
     <div>
       <nav className="navbar-container">
         <div className="navbar-left">
-          <div>
+          <div className="navbar__logo-container">
             <Link href="/">
               <a>
                 <Image
+                  className="navbar__logo"
                   image={header?.logo}
-                  style={{
-                    position: "static",
-                    height: 100,
-                  }}
                   />
               </a>
             </Link>
