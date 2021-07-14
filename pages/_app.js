@@ -4,6 +4,7 @@ import { createContext } from "react";
 import { getStrapiMedia } from "../lib/media";
 import { fetchAPI } from "../lib/api";
 import SimpleReactLightbox from 'simple-react-lightbox'
+import { motion } from 'framer-motion';
 import '../assets/scss/global.scss';
 import '../assets/scss/nav.scss';
 import '../assets/scss/footer.scss';
@@ -15,7 +16,7 @@ import '../assets/scss/contact.scss';
 // Store Strapi Global object in context
 export const GlobalContext = createContext({});
 
-const MyApp = ({ Component, pageProps }) => {
+const MyApp = ({ Component, pageProps, router }) => {
   const { global } = pageProps;
 
   return (
@@ -35,7 +36,16 @@ const MyApp = ({ Component, pageProps }) => {
       </Head>
       <GlobalContext.Provider value={global}>
         <SimpleReactLightbox>
-          <Component {...pageProps} />
+          <motion.div key={router.route} initial="pageInitial" animate="pageAnimate" variants={{
+            pageInitial: {
+              opacity: 0
+            },
+            pageAnimate: {
+              opacity: 1
+            },
+          }}>
+            <Component {...pageProps} />
+          </motion.div>
         </SimpleReactLightbox>
       </GlobalContext.Provider>
     </>
