@@ -39,7 +39,7 @@
 @media screen and (min-width: $breakpoint-mobile-min) and (max-width: $breakpoint-mobile-max) {
   .navbar-container {
     flex-direction: row;
-    padding: $space-sm;
+    // padding: $space-sm;
     align-items: center;
     margin-bottom: $space-sm;
 
@@ -48,15 +48,18 @@
     }
 
     .navbar-left {
-      // flex-direction: column;
       .navbar-phrases {
-        margin: 0;
+        margin-left: $space-sm;
       }
     }
 
     .navbar-right {
       display: flex;
       flex-direction: column;
+      a {
+        padding: $space-sm 0;
+        text-align: right;
+      }
     }
   }
 }
@@ -64,12 +67,20 @@
 @media screen and (min-width: $breakpoint-tablet-min) and (max-width: $breakpoint-tablet-max) {
   .navbar-container {
     margin-bottom: $space-md;
+    .navbar-right {
+      display: flex;
+      flex-direction: column;
+      a {
+        padding: $space-sm 0;
+        text-align: right;
+      }
+    }
   }
 }
 
 @media screen and (min-width: $breakpoint-small-min) and (max-width: $breakpoint-small-max) {
   .navbar-container {
-    margin-bottom: $space-md;
+    margin-bottom: $space-xxl;
   }
 }
 

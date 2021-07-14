@@ -1,2 +1,73 @@
 @import './variables';
 
+.contact__container {
+  display: flex;
+  
+  .contact__image-container {
+    display: flex;
+    .contact__image {
+      object-fit: contain;
+      max-width: 90%;
+    }
+  }
+
+  .contact__block {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    h3 {
+      font-size: $font-md;
+      font-family: 'MuseoSansSemibold';
+    }
+
+    span {
+      font-size: $font-md;
+      display: block;
+    }
+  }
+}
+
+
+@media screen and (min-width: $breakpoint-mobile-min) and (max-width: $breakpoint-mobile-max) {
+  .contact__container {
+    padding-top: $space-xxl;
+    margin-bottom: $space-2xl;
+    flex-direction: column;
+
+    .contact__image-container {
+      justify-content: center;
+      .contact__image {
+        max-width: 100%;
+      }
+    }
+
+    .contact__block {
+      text-align: center;
+    }
+  }
+  
+}
+
+@media screen and (min-width: $breakpoint-tablet-min) and (max-width: $breakpoint-tablet-max) {
+  .contact__container {
+    padding-top: $space-xxl;
+    .contact__image-container {
+      display: flex;
+    }
+
+    .contact__block {
+      flex: 0 0 50%;
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint-small-min) and (max-width: $breakpoint-small-max) {
+  .contact__container {
+    padding-top: $space-xxl;
+  }
+  
+}
+
+@media screen and (min-width: $breakpoint-desktop-min) and (max-width: $breakpoint-desktop-max) {
+
+}

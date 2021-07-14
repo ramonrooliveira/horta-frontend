@@ -36,6 +36,8 @@
     p {
       text-align: justify;
       padding: $space-lg 0 $space-xl;
+      font-size: $font-md;
+      line-height: $space-xl;
     }
   }
 }
@@ -50,7 +52,10 @@
       grid-row-gap: $space-md;
     }
     .project__text-section {
-      padding: 0;
+      padding: 0 $space-xxl;
+      h1 {
+        padding-top: $space-lg;
+      }
     }
   }
 
@@ -67,7 +72,10 @@
     }
 
     .project__text-section {
-      padding: 0;
+      padding: 0 $space-xxl;
+      h1 {
+        padding-top: $space-lg;
+      }
     }
   }
 

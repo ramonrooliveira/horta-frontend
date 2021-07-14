@@ -8,21 +8,22 @@ const Contato = ({ homepage, header, footer, contact }) => {
   return (
     <Layout header={header} footer={footer}>
       <Seo seo={homepage.seo} />
-      <Image
-          image={contact?.image}
-          style={{
-            position: "static",
-            height: 200,
-          }}
-        />
-        <div>
-          <p>{contact?.contactBlock.title}</p>
-          <p>{contact?.contactBlock.addressFirstLine}</p>
-          <p>{contact?.contactBlock.addressSecondLine}</p>
-          <p>tel: {contact?.contactBlock.phones}</p>
-          <p>{contact?.contactBlock.email}</p>
-          <p>instragram: {contact?.contactBlock.instagram}</p>
+      <div className="contact__container">
+        <div className="contact__image-container">
+          <Image
+            image={contact?.image}
+            className="contact__image"
+          />
         </div>
+        <div className="contact__block">
+          <h3>{contact?.contactBlock.title}</h3>
+          <span>{contact?.contactBlock.addressFirstLine}</span>
+          <span>{contact?.contactBlock.addressSecondLine}</span>
+          <span>tel: {contact?.contactBlock.phones}</span>
+          <span>{contact?.contactBlock.email}</span>
+          <span>instragram: {contact?.contactBlock.instagram}</span>
+        </div>
+      </div>
     </Layout>
   );
 };

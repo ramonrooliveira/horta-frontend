@@ -36,18 +36,17 @@ const Project = ({ project, header, footer }) => {
       showThumbnails: false
     }
   }
-  // const imageUrl = getStrapiMedia(project.cover);
 
-  // const seo = {
-  //   metaTitle: article.title,
-  //   metaDescription: article.description,
-  //   shareImage: article.image,
-  //   article: true,
-  // };
+  const seo = {
+    metaTitle: project.title,
+    metaDescription: project.description,
+    shareImage: project.cover,
+    project: true,
+  };
 
   return (
     <Layout header={header} footer={footer}>
-      {/* <Seo seo={seo} /> */}
+      <Seo seo={seo} />
       <div className="project__container">
         <div className="project__photos">
           {project?.photos.map(photo => {

@@ -7,6 +7,13 @@
   font-weight: 100;
   font-display: swap;
 }
+@font-face {
+  font-family: "MuseoSansSemibold";
+  src: url("../../public/fonts/Museo-Sans/MuseoSans-300.otf");
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
 
 html * {
   font-family: "MuseoSans";
@@ -40,7 +47,7 @@ body {
   }
 
   body {
-    padding: 0 2vw;
+    padding: 0 5vw;
   }
 }
 

@@ -10,7 +10,7 @@ const Sobre = ({ homepage, header, footer, about }) => {
     <Layout header={header} footer={footer}>
       <Seo seo={homepage.seo} />
         <div className="about__container">
-          <div className="left-image-section">
+          <div className="about__image-container">
             <Image
               image={about?.image}
               className="about__image"

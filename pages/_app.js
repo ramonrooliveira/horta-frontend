@@ -10,6 +10,7 @@ import '../assets/scss/footer.scss';
 import '../assets/scss/about.scss';
 import '../assets/scss/gallery.scss';
 import '../assets/scss/project.scss';
+import '../assets/scss/contact.scss';
 
 // Store Strapi Global object in context
 export const GlobalContext = createContext({});
