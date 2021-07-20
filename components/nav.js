@@ -18,7 +18,7 @@ const Nav = ({ header }) => {
             </Link>
           </div>
           <div className="navbar-phrases">
-            <span className="navbar-custom-phrase">{header.customPhrase}</span><br />
+            <span className="navbar-custom-phrase">{header.customPhrase}</span>
             <span className="navbar-presentation-phrase">{header.presentationPhrase}</span>
           </div>
         </div>
