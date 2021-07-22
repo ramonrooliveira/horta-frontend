@@ -17,8 +17,8 @@
 
         .gallery__image {
           width: 100%;
-          max-height: 160px;
-          min-height: 160px;
+          max-height: 190px;
+          min-height: 190px;
           object-fit: cover;
         }
       }
@@ -36,19 +36,9 @@
 
 
 @media screen and (min-width: $breakpoint-mobile-min) and (max-width: $breakpoint-mobile-max) {
-  // .gallery__grid {
-  //   justify-content: space-around;
-
-  //   .gallery__card {
-  //     .gallery__card-link {
-  //       .gallery__card-project-cover {
-  //         .gallery__image {
-  //           width: 100%;
-  //         }
-  //       }
-  //     }
-  //   }
-  // }
+  .gallery__grid {
+    margin-bottom: $space-2xl;
+  }
 }
 
 @media screen and (min-width: $breakpoint-tablet-min) and (max-width: $breakpoint-tablet-max) {

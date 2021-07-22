@@ -9,7 +9,7 @@
     flex: 0 0 50%;
     .about__image {
       object-fit: contain;
-      max-width: 100%;
+      max-width: 32vw;
       // padding: $space-md;
     }
   }
@@ -34,7 +34,19 @@
 
 @media screen and (min-width: $breakpoint-mobile-min) and (max-width: $breakpoint-mobile-max) {
   .about__container {
+    padding-top: $space-xl;
+    margin-bottom: $space-2xl;
     flex-direction: column;
+
+    .about__image-container {
+      justify-content: center;
+      padding-bottom: $space-xl;
+      .about__image {
+        // max-width: unset;
+        // max-height: 50vh;
+        max-width: 100%;
+      }
+    }
   }
 
   .about__text-section {
@@ -48,13 +60,14 @@
 
 @media screen and (min-width: $breakpoint-tablet-min) and (max-width: $breakpoint-tablet-max) {
   .about__container {
+    padding-top: $space-xxl;
     flex-direction: column;
 
     .about__image-container {
       justify-content: center;
+      padding-bottom: $space-xl;
       .about__image {
-        max-width: unset;
-        max-height: 50vh;
+        max-width: 100%;
       }
     }
 

@@ -53,19 +53,19 @@ body {
 
 @media screen and (min-width: $breakpoint-tablet-min) and (max-width: $breakpoint-tablet-max) {
   body {
-    padding: 0 5vw;
+    padding: 0 10vw;
   }
 }
 
 @media screen and (min-width: $breakpoint-small-min) and (max-width: $breakpoint-small-max) {
   body {
-    padding: 0 8vw;
+    padding: 0 15vw;
   }
 }
 
 @media screen and (min-width: $breakpoint-desktop-min) and (max-width: $breakpoint-desktop-max) {
   body {
-    padding: 0 12vw;
+    padding: 0 15vw;
   }
 }
 

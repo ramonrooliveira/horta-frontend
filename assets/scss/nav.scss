@@ -8,9 +8,9 @@
   margin-bottom: 72px;
 
   .navbar__logo-container {
-    max-height: 100px;
+    max-height: 90px;
     .navbar__logo {
-      max-height: 100px;
+      max-height: 90px;
     }
   }
 
@@ -40,7 +40,7 @@
   .navbar-container {
     flex-direction: row;
     // padding: $space-sm;
-    align-items: center;
+    // align-items: center;
     margin-bottom: $space-sm;
 
     .navbar__logo {

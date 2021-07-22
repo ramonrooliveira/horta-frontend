@@ -2,26 +2,34 @@
 
 .contact__container {
   display: flex;
+  margin-bottom: $space-2xl;
   
   .contact__image-container {
     display: flex;
+    flex: 0 0 50%;
+    // max-height: 380px;
+    // max-width: 500px;
+    // margin-right: 5vw;
     .contact__image {
       object-fit: contain;
-      max-width: 90%;
+      max-width: 32vw;
+      // max-width: 35vw;
     }
   }
 
   .contact__block {
     display: flex;
+    padding-left: 6vw;
     flex-direction: column;
     justify-content: flex-end;
     h3 {
       font-size: $font-md;
       font-family: 'MuseoSansSemibold';
+      margin-block-end: unset;
     }
 
     span {
-      font-size: $font-md;
+      font-size: $font-sm;
       display: block;
     }
   }
@@ -30,14 +38,17 @@
 
 @media screen and (min-width: $breakpoint-mobile-min) and (max-width: $breakpoint-mobile-max) {
   .contact__container {
-    padding-top: $space-xxl;
+    padding-top: $space-xl;
     margin-bottom: $space-2xl;
     flex-direction: column;
 
     .contact__image-container {
       justify-content: center;
+      padding-bottom: $space-xl;
+      max-height: 45vh;
       .contact__image {
         max-width: 100%;
+        object-fit: cover;
       }
     }
 
@@ -51,12 +62,22 @@
 @media screen and (min-width: $breakpoint-tablet-min) and (max-width: $breakpoint-tablet-max) {
   .contact__container {
     padding-top: $space-xxl;
+    flex-direction: column;
     .contact__image-container {
       display: flex;
+      justify-content: center;
+      padding-bottom: $space-xl;
+      max-height: 45vh;
+      .contact__image {
+        max-width: 100%;
+        object-fit: cover;
+      }
     }
 
     .contact__block {
-      flex: 0 0 50%;
+      // flex: 0 0 50%;
+      text-align: center;
+
     }
   }
 }
