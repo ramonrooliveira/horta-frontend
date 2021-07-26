@@ -7,11 +7,12 @@
   .contact__image-container {
     display: flex;
     flex: 0 0 50%;
+    min-height: 340px;
     // max-height: 380px;
     // max-width: 500px;
     // margin-right: 5vw;
     .contact__image {
-      object-fit: contain;
+      object-fit: cover;
       max-width: 32vw;
       // max-width: 35vw;
     }
@@ -26,6 +27,7 @@
       font-size: $font-md;
       font-family: 'MuseoSansSemibold';
       margin-block-end: unset;
+      padding-bottom: $space-md;
     }
 
     span {
@@ -46,6 +48,7 @@
       justify-content: center;
       padding-bottom: $space-xl;
       max-height: 45vh;
+      min-height: unset;
       .contact__image {
         max-width: 100%;
         object-fit: cover;
@@ -85,6 +88,9 @@
 @media screen and (min-width: $breakpoint-small-min) and (max-width: $breakpoint-small-max) {
   .contact__container {
     padding-top: $space-xxl;
+    .contact__image-container {
+      min-height: unset;
+    }
   }
   
 }

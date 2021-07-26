@@ -15,15 +15,27 @@
   font-display: swap;
 }
 
+
 html * {
   font-family: "MuseoSans";
   color: $primary-color;
   font-size: $font-md;
+
+  // /* hide scrollbar */
+  // &::-webkit-scrollbar {
+  //   display: none;
+  // }
+  // -ms-overflow-style: none;  /* IE and Edge */
+  // scrollbar-width: none;  /* Firefox */
 }
 
 body {
   margin: 0;
   padding: 0 15vw;
+}
+
+body.SRLOpened {
+  overflow: unset !important;
 }
 
 .primary-button {

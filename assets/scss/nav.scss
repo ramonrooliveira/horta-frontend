@@ -4,8 +4,8 @@
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  padding: $space-xl 0;
-  margin-bottom: 72px;
+  padding: $space-xxl 0 $space-lg;
+  margin-bottom: 48px;
 
   .navbar__logo-container {
     max-height: 90px;

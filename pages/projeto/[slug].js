@@ -64,12 +64,12 @@ const Project = ({ project, header, footer }) => {
         <div className="project__text-section">
           <h1>{project.title}</h1>
           <p>{project?.description}</p>
-          <Link href="/">
+          {/* <Link href="/">
             <button 
               type="button"
               className="primary-button"
             >projetos</button>
-          </Link>
+          </Link> */}
         </div>
       </div>
     </Layout>

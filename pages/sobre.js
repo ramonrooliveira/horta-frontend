@@ -17,14 +17,14 @@ const Sobre = ({ homepage, header, footer, about }) => {
             />
           </div>
           <div className="about__text-section">
-            <h1>{about?.title}</h1>
+            {/* <h1>{about?.title}</h1> */}
             <p>{about?.text}</p>
-            <Link href={about?.button.url}>
+            {/* <Link href={about?.button.url}>
               <button 
                 type="button"
                 className="primary-button"
               >{about?.button.label}</button>
-            </Link>
+            </Link> */}
           </div>
         </div>
     </Layout>
