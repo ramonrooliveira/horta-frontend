@@ -4,7 +4,8 @@
   display: grid;
   align-items: center;
   grid-column-gap: $space-xl;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
+  // grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   align-items: self-start;
   margin-bottom: $space-xxl;
 
@@ -38,10 +39,14 @@
 @media screen and (min-width: $breakpoint-mobile-min) and (max-width: $breakpoint-mobile-max) {
   .gallery__grid {
     margin-bottom: $space-2xl;
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
 @media screen and (min-width: $breakpoint-tablet-min) and (max-width: $breakpoint-tablet-max) {
+  .gallery__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
 }
 
