@@ -10,8 +10,8 @@ const Gallery = ({ projects }) => {
         {projects?.map((project, i) => {
           return (
             <div className="gallery__card" key={project.slug}>
-              <Link href={`/projeto/${project.slug}`}>
-              <a className="gallery__card-link">
+              <Link href={project.title == 'em breve...' ? '' : `/projeto/${project.slug}`}>
+              <a className={`gallery__card-link ${project.title == 'em breve...' ? 'inactive' : ''}`}>
                 <div className="gallery__card-project-cover">
                   <Image
                     image={project.cover}

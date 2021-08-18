@@ -13,6 +13,10 @@
     .gallery__card-link {
       text-decoration: none;
 
+      &.inactive {
+        cursor: unset;
+      }
+
       .gallery__card-project-cover {
         object-fit: cover;
 
