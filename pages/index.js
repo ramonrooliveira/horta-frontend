@@ -26,12 +26,22 @@ const Home = ({ homepage, header, footer, projects }) => {
 
 export async function getStaticProps() {
   // Run API calls in parallel
-  const [homepage, header, footer, projects] = await Promise.all([
+  const [homepage, header, footer, projectsUnsorted] = await Promise.all([
     fetchAPI("/homepage"),
     fetchAPI("/header"),
     fetchAPI("/footer"),
     fetchAPI("/projects")
   ]);
+
+  // push unfinished projects to the end
+  let projects = [];
+  await projectsUnsorted.forEach((elem, index) => {
+    if (elem.title == 'em breve...') {
+      projects = [...projects, elem];
+    } else {
+      projects = [elem, ...projects];
+    }
+  })
 
   return {
     props: { homepage, header, footer, projects },
