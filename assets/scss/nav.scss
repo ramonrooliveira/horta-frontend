@@ -50,6 +50,10 @@
     .navbar-left {
       .navbar-phrases {
         margin-left: $space-sm;
+        
+        span {
+          font-size: $font-sm;
+        }
       }
     }
 
@@ -60,6 +64,7 @@
       a {
         padding: $space-sm 0 0;
         text-align: right;
+        font-size: $font-sm;
       }
     }
   }
