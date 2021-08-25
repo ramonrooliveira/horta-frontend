@@ -52,7 +52,7 @@
         margin-left: $space-sm;
         
         span {
-          font-size: $font-sm;
+          font-size: $font-xxs;
         }
       }
     }
@@ -73,6 +73,15 @@
 @media screen and (min-width: $breakpoint-tablet-min) and (max-width: $breakpoint-tablet-max) {
   .navbar-container {
     margin-bottom: $space-md;
+
+    .navbar-left {
+      .navbar-phrases {
+        span {
+          font-size: $font-xs;
+        }
+      }
+    }
+
     .navbar-right {
       display: flex;
       flex-direction: column;
