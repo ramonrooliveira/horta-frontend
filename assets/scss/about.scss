@@ -8,10 +8,10 @@
     display: flex;
     flex: 0 0 50%;
     min-height: 340px;
+    max-height: 45vh;
     .about__image {
       object-fit: cover;
       max-width: 32vw;
-      // max-height: 340px;
       // padding: $space-md;
     }
   }
@@ -120,4 +120,21 @@
 
 @media screen and (min-width: $breakpoint-desktop-min) and (max-width: $breakpoint-desktop-max) {
 
+}
+
+
+// specific rule to keep image size
+@media screen and (min-width: 1450px) and (max-width: 1520px) {
+  .about__container {
+    .about__image-container {
+      max-height: 48vh;
+    }
+  }
+}
+@media screen and (min-width: 1521px) {
+  .about__container {
+    .about__image-container {
+      max-height: unset;
+    }
+  }
 }
