@@ -1,0 +1,19 @@
+@import './variables';
+
+a.float {
+	position:fixed;
+	width:42px;
+	height:42px;
+	bottom:12px;
+	right:12px;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:24px;
+  z-index:100;
+}
+
+i.my-float {
+	margin-top:16px;
+  color: $primary-color;
+}

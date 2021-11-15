@@ -12,6 +12,7 @@ import '../assets/scss/about.scss';
 import '../assets/scss/gallery.scss';
 import '../assets/scss/project.scss';
 import '../assets/scss/contact.scss';
+import '../assets/scss/floaty.scss';
 
 // Store Strapi Global object in context
 export const GlobalContext = createContext({});
