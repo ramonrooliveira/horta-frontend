@@ -2,18 +2,45 @@
 
 a.float {
 	position:fixed;
-	width:24px;
+	width:32px;
 	height:42px;
-	bottom:12px;
-	right:12px;
+	bottom:16px;
+	right:15vw;
 	color:#FFF;
 	border-radius:50px;
 	text-align:center;
-  font-size:24px;
+  font-size:32px;
   z-index:100;
 }
 
 i.my-float {
 	margin-top:16px;
   color: $primary-color;
+}
+
+@media screen and (min-width: $breakpoint-mobile-min) and (max-width: $breakpoint-mobile-max) {
+  a.float {
+    right: 5vw;
+		width:24px;
+		font-size: 24px;
+		bottom: 12px;
+  }
+}
+
+@media screen and (min-width: $breakpoint-tablet-min) and (max-width: $breakpoint-tablet-max) {
+  a.float {
+    right: 10vw;
+  }
+}
+
+@media screen and (min-width: $breakpoint-small-min) and (max-width: $breakpoint-small-max) {
+  a.float {
+    right: 15vw;
+  }
+}
+
+@media screen and (min-width: $breakpoint-desktop-min) and (max-width: $breakpoint-desktop-max) {
+  a.float {
+    right: 15vw;
+  }
 }
