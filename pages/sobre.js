@@ -4,6 +4,7 @@ import Seo from "../components/seo";
 import { fetchAPI } from "../lib/api";
 import Image from "../components/image"
 import Link from "next/link";
+import { homepage, header, footer, about } from "../data/data"
 
 const Sobre = ({ homepage, header, footer, about }) => {
   return (
@@ -33,13 +34,14 @@ const Sobre = ({ homepage, header, footer, about }) => {
 
 export async function getStaticProps() {
   // Run API calls in parallel
-  const [homepage, header, footer, about] = await Promise.all([
-    fetchAPI("/homepage"),
-    fetchAPI("/header"),
-    fetchAPI("/footer"),
-    fetchAPI("/about")
-  ]);
+  // const [homepage, header, footer, about] = await Promise.all([
+  //   fetchAPI("/homepage"),
+  //   fetchAPI("/header"),
+  //   fetchAPI("/footer"),
+  //   fetchAPI("/about")
+  // ]);
 
+  // console.log({ homepage, header, footer, about })
   return {
     props: { homepage, header, footer, about },
     revalidate: 1,

@@ -9,6 +9,7 @@ import Link from 'next/link';
 // import Zoom from 'react-medium-image-zoom'
 // import 'react-medium-image-zoom/dist/styles.css'
 import { SRLWrapper } from "simple-react-lightbox";
+import { projects, header, footer } from "../../data/data"
 
 const Project = ({ project, header, footer }) => {
 
@@ -77,7 +78,7 @@ const Project = ({ project, header, footer }) => {
 };
 
 export async function getStaticPaths() {
-  const projects = await fetchAPI("/projects");
+  // const projects = await fetchAPI("/projects");
 
   return {
     paths: projects.map((project) => ({
@@ -90,14 +91,14 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const [projects, header, footer] = await Promise.all([
-    fetchAPI(`/projects?slug=${params.slug}`),
-    fetchAPI("/header"),
-    fetchAPI("/footer")
-  ]);
+  // const [projects, header, footer] = await Promise.all([
+  //   fetchAPI(`/projects?slug=${params.slug}`),
+  //   fetchAPI("/header"),
+  //   fetchAPI("/footer")
+  // ]);
 
   return {
-    props: { project: projects[0], header, footer },
+    props: { project: projects.find((p) => p.slug == params.slug), header, footer },
     revalidate: 1,
   };
 }

@@ -3,6 +3,7 @@ import Layout from "../components/layout";
 import Seo from "../components/seo";
 import { fetchAPI } from "../lib/api";
 import Image from "../components/image";
+import { homepage, header, footer, contact } from "../data/data"
 
 const Contato = ({ homepage, header, footer, contact }) => {
   return (
@@ -29,13 +30,13 @@ const Contato = ({ homepage, header, footer, contact }) => {
 };
 
 export async function getStaticProps() {
-  // Run API calls in parallel
-  const [homepage, header, footer, contact] = await Promise.all([
-    fetchAPI("/homepage"),
-    fetchAPI("/header"),
-    fetchAPI("/footer"),
-    fetchAPI("/contact")
-  ]);
+  // // Run API calls in parallel
+  // const [homepage, header, footer, contact] = await Promise.all([
+  //   fetchAPI("/homepage"),
+  //   fetchAPI("/header"),
+  //   fetchAPI("/footer"),
+  //   fetchAPI("/contact")
+  // ]);
 
   return {
     props: { homepage, header, footer, contact },
